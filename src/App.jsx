@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Environment, Stats, PerformanceMonitor } from '@react-three/drei'
-import Game from './Game'
+import Game from './components/Game'
 import { Suspense, useState } from 'react'
 
 export default function App() {
