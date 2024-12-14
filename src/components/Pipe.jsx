@@ -1,9 +1,10 @@
 import { useGLTF } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
+import { MODELS } from '../config/assets'
 
 export default function Pipe({ id, position, colliders }) {
   const colliderRef = [useRef(), useRef()]
-  const { nodes, materials } = useGLTF('./models/pipe.glb')
+  const { nodes, materials } = useGLTF(MODELS.PIPE)
   useEffect(() => {
     //console.log('adding pipe ' + id)
     colliders[colliderRef[0].current.name] = colliderRef[0].current
@@ -34,4 +35,4 @@ export default function Pipe({ id, position, colliders }) {
   )
 }
 
-useGLTF.preload('./models/pipe.glb')
+useGLTF.preload(MODELS.PIPE)

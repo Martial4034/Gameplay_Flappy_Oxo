@@ -1,9 +1,10 @@
 import { useRef, useState, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { MODELS } from '../config/assets'
 
 export default function Bird({ crashed = false, color = 'green' }) {
   const frame = [useRef(), useRef(), useRef()]
-  const { nodes, materials } = useGLTF('./models/bird.glb')
+  const { nodes, materials } = useGLTF(MODELS.BIRD)
   const [frameCount, setFrameCount] = useState(0)
 
   let primary, secondary, tertiary
@@ -90,4 +91,4 @@ export default function Bird({ crashed = false, color = 'green' }) {
   )
 }
 
-useGLTF.preload('./models/bird.glb')
+useGLTF.preload(MODELS.BIRD)

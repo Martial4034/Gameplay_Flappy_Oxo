@@ -6,9 +6,20 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three-core': ['three'],
+          'react-core': ['react', 'react-dom']
+        }
+      }
+    }
   },
   server: {
     port: 3000
-  }
+  },
+  publicDir: 'public',
+  assetsInclude: ['**/*.glb', '**/*.gltf', '**/*.fbx', '**/*.png', '**/*.jpg']
 })
