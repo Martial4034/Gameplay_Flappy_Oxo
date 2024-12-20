@@ -18,20 +18,21 @@ export default function Scenery() {
     <>
       <mesh rotation-x={-Math.PI / 2} receiveShadow>
         <planeGeometry args={[600, 10]}></planeGeometry>
-        <meshStandardMaterial color={'#567d46'} />
+        <meshStandardMaterial color={'#FFFFFF'} />
       </mesh>
-      <mesh position={[0, 1.5, -5]} receiveShadow>
-        <planeGeometry args={[600, 4]}></planeGeometry>
+      <mesh position={[0, 6.5, -5]} receiveShadow>
+        <planeGeometry args={[600, 16]}></planeGeometry>
         <meshStandardMaterial map={forest} transparent />
       </mesh>
-      <mesh position={[0, 2.5, -7.5]} receiveShadow>
+      <mesh position={[0, 9, -7.5]} receiveShadow>
         <planeGeometry args={[600, 8]}></planeGeometry>
         <meshStandardMaterial map={city} transparent />
       </mesh>
-      <mesh position={[0, 3, -10]} receiveShadow>
+      <mesh position={[0, 11, -10]} receiveShadow>
         <planeGeometry args={[600, 12]}></planeGeometry>
         <meshStandardMaterial map={hills} transparent />
       </mesh>
     </>
   )
 }
+
